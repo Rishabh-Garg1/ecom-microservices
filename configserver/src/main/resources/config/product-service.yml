@@ -1,10 +1,9 @@
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/product
-#    url: jdbc:postgresql://<HOST>/product?sslmode=require&channel_binding=require'
 #    url: jdbc:mysql://localhost:3307/rishabh
-    username: rishabh
-    password: rishabh
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
   jpa:
     database: POSTGRESQL
     show-sql: true
@@ -16,17 +15,6 @@ spring:
         format_sql: true
         jdbc:
           time_zone: Asia/Kolkata
-
-
-#  h2:
-#    console:
-#      enabled: true
-#  datasource:
-#    url: jdbc:h2:mem:test
-#  jpa:
-#    show-sql: true
-#    hibernate:
-#      ddl-auto: create
 
 server:
   port: 8081
